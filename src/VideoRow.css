@@ -1,0 +1,37 @@
+.videoRow {
+  display: flex;
+  margin-bottom: 30px;
+  max-width: 700px;
+  text-decoration: none;
+  flex-direction: column;
+}
+
+.videoRow__text > img {
+  object-fit: contain;
+  width: 280px;
+  height: 160px;
+}
+
+.videoRow__text {
+  margin-left: 14px;
+  color: black;
+  font-weight: 300;
+}
+.videoRow__description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #606060;
+  font-weight: normal;
+}
+
+.videoRow__headline {
+  font-size: 12px;
+  color: #606060;
+  margin-left: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.videoRow > Link {
+  text-decoration: none !important;
+}

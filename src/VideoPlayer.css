@@ -1,0 +1,40 @@
+.videoplayer {
+  display: flex;
+  flex-direction: column;
+}
+.videoplayer__video {
+  padding: 2rem;
+  padding-bottom: 0.5rem;
+}
+.videoplayer__video iframe {
+  display: block; /* iframes are inline by default */
+  background: #000;
+  border: none; /* Reset default border */
+  height: 80vh; /* Viewport-relative units */
+  width: 80vw;
+}
+.videoplayer__videoInfo {
+  padding-left: 2rem;
+  width: 80vw;
+}
+.videoplayer__title {
+  color: black;
+  font-size: x-large;
+  font-weight: 400;
+}
+.videoplayer__descriptionText {
+  width: 45rem;
+  margin-top: 10px;
+}
+.videoplayer__videoInfo hr {
+  height: 3px;
+  background-color: lightgray;
+  border-width: 0;
+  margin: 4px 0px;
+}
+.videoplayer__videoInfo p {
+  margin-top: 10px;
+}
+.videoplayer__videoInfo h4 {
+  margin-top: 10px;
+}
