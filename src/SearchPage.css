@@ -1,9 +1,12 @@
 .searchPage {
   display: flex;
   flex-direction: column;
-  flex: 0.8;
   background-color: #f9f9f9;
   padding: 20px 20px;
+  width: 80%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1), -2px 2px 2px rgba(0, 0, 0, 0.1),
+    2px -2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
 .searchPage__filter {

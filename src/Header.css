@@ -10,14 +10,15 @@
 }
 .header__left {
   display: flex;
-
   align-items: center;
 }
+
 .header__logo {
   height: 25px;
   object-fit: contain;
   margin-left: 20px;
 }
+
 .header__input {
   display: flex;
   align-items: center;
@@ -51,4 +52,28 @@
 }
 .header__icon {
   margin-right: 8px;
+}
+@media (max-width: 600px) {
+  .header {
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+  }
+  .header__logo {
+    height: 20px;
+    object-fit: contain;
+    margin: 10px;
+  }
+  .header__input {
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+  .header__inputButton {
+    width: 1rem !important;
+    color: gray;
+  }
+  .header__icon {
+    display: none;
+  }
 }

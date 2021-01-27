@@ -47,10 +47,14 @@ function Header({ term }) {
       </div>
 
       <div className="header__icons">
-        <VideoCallSharpIcon className="header__icon" />
-        <AppsIcon className="header__icon" />
-        <NotificationsSharpIcon className="header__icon" />
-        <Avatar src="" />
+        <div className="header__icon">
+          <VideoCallSharpIcon className="header__icon" />
+          <AppsIcon className="header__icon" />
+          <NotificationsSharpIcon className="header__icon" />
+        </div>
+        <div className="header__avatar">
+          <Avatar src="" />
+        </div>
       </div>
     </div>
   );

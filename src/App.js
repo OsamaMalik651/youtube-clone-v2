@@ -6,10 +6,24 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React, { useState } from "react";
 import youtube from "./apis/youtube";
 import VideoPlayer from "./VideoPlayer";
+import MainPage from "./MainPage";
 
 function App() {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const defaultVideos = async (term) => {
+    const response = await youtube.get("/search", {
+      params: {
+        q: term,
+      },
+    });
+    console.log(response);
+    setVideos(response.data.items);
+    setSelectedVideo(response.data.items[0]);
+  };
+
+  // defaultVideos(term);
 
   const onSubmit = async (searchTerm) => {
     //setSearchTerm(inputSearch);
@@ -38,15 +52,21 @@ function App() {
           </Route>
           <Route path="/search/:searchTerm">
             <div className="app__page">
-              {/* <Sidebar /> */}
-              <SearchPage videos={videos} onVideoSelect={onVideoSelect} />
+              <SearchPage
+                className="searchPage"
+                videos={videos}
+                onVideoSelect={onVideoSelect}
+              />
             </div>
           </Route>
           <Route path="/">
             <div className="app__page">
-              <Sidebar />
-              {/* <VideoPlayer /> */}
-              {/* <RecommededVideos /> */}
+              <Sidebar className="sidebar" />
+              <MainPage
+                term={defaultVideos}
+                videos={videos}
+                onVideoSelect={onVideoSelect}
+              />
             </div>
           </Route>
         </Switch>
